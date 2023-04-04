@@ -11,6 +11,7 @@ This extension adds the following commands to the command palette:
 
 These commands can also be accessed from the context menu when right-clicking on a file or folder in the explorer.
 
+![Example Usage](https://user-images.githubusercontent.com/107955194/229723149-43843dce-190c-4c86-ab4a-f49096335665.png)
 
 ## Requirements
 
