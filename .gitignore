@@ -12,3 +12,6 @@ test/
 image.png
 .eslintrc.json
 package-lock.json
+images/
+LICENSE
+*.vsix

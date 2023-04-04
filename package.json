@@ -1,8 +1,10 @@
 {
   "name": "pathConverterCopyForWindows",
-  "displayName": "pathConverterCopyForWindows",
+  "displayName": "path-converter-copy-for-windows",
+  "publisher": "KL",
+  "icon": "images/icon.png",
   "description": "This extension converts backslashes to slashes in file paths when copying absolute paths on Windows.",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "engines": {
       "vscode": "^1.63.0"
   },
@@ -10,31 +12,35 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:copyAbsolutePathWithForwardSlash",
-    "onCommand:copyRelativePathWithForwardSlash"
+    "onCommand:extension.copyAbsolutePathWithForwardSlash",
+    "onCommand:extension.copyRelativePathWithForwardSlash"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "copyAbsolutePathWithForwardSlash",
+        "command": "extension.copyAbsolutePathWithForwardSlash",
         "title": "Copy Absolute Path"
       },
       {
-        "command": "copyRelativePathWithForwardSlash",
+        "command": "extension.copyRelativePathWithForwardSlash",
         "title": "Copy Relative Path"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "copyAbsolutePathWithForwardSlash",
-          "group": "6_copypath",
+          "command": "extension.copyAbsolutePathWithForwardSlash",
+          "group": "navigation",
           "when": "resourceScheme == file"
         },
         {
-          "command": "copyRelativePathWithForwardSlash",
-          "group": "6_copypath",
+          "command": "extension.copyRelativePathWithForwardSlash",
+          "group": "navigation",
+          "when": "resourceScheme == file"
+        },
+        {
+          "group": "navigationSeparator",
           "when": "resourceScheme == file"
         }
       ]
@@ -46,7 +52,7 @@
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.77.0",
+    "@types/vscode": "^1.63.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",
@@ -55,5 +61,13 @@
     "mocha": "^10.2.0",
     "typescript": "^4.9.5",
     "@vscode/test-electron": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KLJP01/pathConverterCopyForWindows.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "KLJP01"
   }
 }
