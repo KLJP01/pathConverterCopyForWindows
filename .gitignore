@@ -14,3 +14,4 @@ image.png
 package-lock.json
 images/
 *.vsix
+tokens/
