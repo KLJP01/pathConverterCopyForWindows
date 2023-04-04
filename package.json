@@ -4,7 +4,7 @@
   "publisher": "KL",
   "icon": "images/icon.png",
   "description": "This extension converts backslashes to slashes in file paths when copying absolute paths on Windows.",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "engines": {
       "vscode": "^1.63.0"
   },
@@ -12,35 +12,31 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.copyAbsolutePathWithForwardSlash",
-    "onCommand:extension.copyRelativePathWithForwardSlash"
+    "onCommand:copyAbsolutePathWithForwardSlash",
+    "onCommand:copyRelativePathWithForwardSlash"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.copyAbsolutePathWithForwardSlash",
+        "command": "copyAbsolutePathWithForwardSlash",
         "title": "Copy Absolute Path"
       },
       {
-        "command": "extension.copyRelativePathWithForwardSlash",
+        "command": "copyRelativePathWithForwardSlash",
         "title": "Copy Relative Path"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.copyAbsolutePathWithForwardSlash",
-          "group": "navigation",
+          "command": "copyAbsolutePathWithForwardSlash",
+          "group": "6_copypath",
           "when": "resourceScheme == file"
         },
         {
-          "command": "extension.copyRelativePathWithForwardSlash",
-          "group": "navigation",
-          "when": "resourceScheme == file"
-        },
-        {
-          "group": "navigationSeparator",
+          "command": "copyRelativePathWithForwardSlash",
+          "group": "6_copypath",
           "when": "resourceScheme == file"
         }
       ]
