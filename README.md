@@ -24,6 +24,6 @@ These commands can also be accessed from the context menu when right-clicking on
 3. Search for `pathConverterCopyForWindows`
 4. Click `Install` and then `Reload` to activate the extension
 
-## License
+## Download
 
-This extension is licensed under the [MIT License](LICENSE).
+You can download this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=KL.pathConverterCopyForWindows).
